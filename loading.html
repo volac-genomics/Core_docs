@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="Amy J Baldwin">
+  <link rel="canonical" href="https://volac-genomics.github.io/Core_docs/loading.html">
+  <link rel="shortcut icon" href="img/favicon.ico">
+  <title>Loading the raw data - Genomics Core</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="css/theme.css" />
+  <link rel="stylesheet" href="css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Loading the raw data";
+    var mkdocs_page_input_path = "loading.md";
+    var mkdocs_page_url = "/Core_docs/loading.html";
+  </script>
+  
+  <script src="js/jquery-2.1.1.min.js" defer></script>
+  <script src="js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="index.html" class="icon icon-home"> Genomics Core</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="index.html">Introduction</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="quick.html">Quick start</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Running the Core</span></p>
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal" href="access.html">Accessing the server</a>
+                    </li>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="loading.html">Loading the raw data</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#transferring-your-data-to-the-core">Transferring your data to the Core</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#unpacking-your-data">Unpacking your data</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#loading-your-data-into-the-input-folder">Loading your data into the input folder</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#checking-transfer-is-complete">Checking transfer is complete</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#removing-the-intermediate-files">Removing the intermediate files</a>
+    </li>
+    </ul>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="sampleSheet.html">Preparing the sample sheet</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="running.html">Initiating the Core</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="unloading.html">Downloading outputs</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Further Information</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="faq.html">FAQs</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">Troubleshooting</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Genomics Core</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Running the Core &raquo;</li>
+        
+      
+    
+    <li>Loading the raw data</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/volac-genomics/Core_docs/edit/master/docs/loading.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="loading-your-raw-data">Loading your raw data</h1>
+<hr />
+<h2 id="transferring-your-data-to-the-core">Transferring your data to the Core</h2>
+<p>The sequencing facility will let you know once your samples are processed. They will send you an email with instructions on how to download your data. </p>
+<p>Transfer the raw data directly to the Core's downloads folder on the Volac server. You will likely use the copy URL, <code>curl</code>, command. Make sure you have established a stable connection before transferring the data. </p>
+<p>The command will take some time to run depending on the amount of data and the transfer speed. You can detach and reconnect to your tmux session at any point. This will not interfer with execution of the command. </p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>The command to transfer the raw data may look something like this:</p>
+<p><code>curl -sL https://leopard.bios.cf.ac.uk/nextcloud/index.php/s/gFHjWEoIR26OZec/download &gt; /genomics/home/vol-genomics/genome_tools/Core/downloads/2022-04-29.zip</code></p>
+<p>You can choose the name of the downloaded file, in this case <code>2022-04-29.zip</code>.</p>
+</div>
+<hr />
+<h2 id="unpacking-your-data">Unpacking your data</h2>
+<p>The data files are compressed. To extract the data files enter, substituting <code>YYYY-MM-DD</code> for the actual file name:</p>
+<pre><code>unzip YYYY-MM-DD.zip -d /genomics/home/vol-genomics/genome_tools/Core/downloads/
+</code></pre>
+<div class="admonition information">
+<p class="admonition-title">Information</p>
+<p>ZIP is a common file format that's used to compress one or more files together into a single location. This reduces file size and makes it easier to transport or store. A recipient can unzip (or extract) a ZIP file after transport and use the file in the original format.</p>
+</div>
+<hr />
+<h2 id="loading-your-data-into-the-input-folder">Loading your data into the input folder</h2>
+<p>Make a new sub-directory in the input directory using:</p>
+<pre><code>mkdir ~/genome_tools/Core/input_core/YYYY-MM-DD
+</code></pre>
+<p>Move the raw data files to the Core's inut folder using:</p>
+<pre><code>mv ~/genome_tools/Core/downloads/YYYY-MM-DD/*_001.fastq.gz ~/genome_tools/Core/input_core/YYYY-MM-DD
+</code></pre>
+<p>Replace <code>YYYY-MM-DD</code> with actual folder name. You do not need to replace the <code>*</code>; it is a glob character. </p>
+<hr />
+<h2 id="checking-transfer-is-complete">Checking transfer is complete</h2>
+<p>Navigate to new folder in <code>input_core</code> and check there are two files for every sequenced isolate. </p>
+<p>The two files are named <code>*_R1_001.fastq.gz</code> and <code>*_R2_001.fastq.gz</code>, where <code>*</code> is a unique identification code assigned by the sequencing facility. </p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Forward: <code>AB_PS_1_S1<strong>_R1_001.fastq.gz</strong></code>, and Reverse: <code>AB_PS_1_S1<strong>_R2_001.fastq.gz</strong></code>.</p>
+<p>Forward: <code>AB_PS_2_S2<strong>_R1_001.fastq.gz</strong></code>, and Reverse: <code>AB_PS_2_S2<strong>_R2_001.fastq.gz</strong></code></p>
+</div>
+<p>The files are called 'forward' <code>R1</code>, and 'reverse' <code>R2</code>.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>If your samples were processed using an Illumina MiSeq, rather than an Illumina NextSeq the sample names will include an additional <code>_L001</code>. This is important to know when you start the Core. </p>
+</div>
+<hr />
+<h2 id="removing-the-intermediate-files">Removing the intermediate files</h2>
+<p>Delete the <em>unzipped</em> files from the downloads folder. </p>
+<p>Do NOT delete <code>YYYY-MM-DD.zip</code>.</p>
+<hr />
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="sampleSheet.html" class="btn btn-neutral float-right" title="Preparing the sample sheet">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="access.html" class="btn btn-neutral" title="Accessing the server"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/volac-genomics/Core_docs/" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="access.html" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="sampleSheet.html" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '.';</script>
+    <script src="js/theme_extra.js" defer></script>
+    <script src="js/theme.js" defer></script>
+      <script src="search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

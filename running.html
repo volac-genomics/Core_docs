@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="Amy J Baldwin">
+  <link rel="canonical" href="https://volac-genomics.github.io/Core_docs/running.html">
+  <link rel="shortcut icon" href="img/favicon.ico">
+  <title>Initiating the Core - Genomics Core</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="css/theme.css" />
+  <link rel="stylesheet" href="css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Initiating the Core";
+    var mkdocs_page_input_path = "running.md";
+    var mkdocs_page_url = "/Core_docs/running.html";
+  </script>
+  
+  <script src="js/jquery-2.1.1.min.js" defer></script>
+  <script src="js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="index.html" class="icon icon-home"> Genomics Core</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="index.html">Introduction</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="quick.html">Quick start</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Running the Core</span></p>
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal" href="access.html">Accessing the server</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="loading.html">Loading the raw data</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="sampleSheet.html">Preparing the sample sheet</a>
+                    </li>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="running.html">Initiating the Core</a>
+    <ul class="current">
+    </ul>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="unloading.html">Downloading outputs</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Further Information</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="faq.html">FAQs</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">Troubleshooting</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Genomics Core</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Running the Core &raquo;</li>
+        
+      
+    
+    <li>Initiating the Core</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/volac-genomics/Core_docs/edit/master/docs/running.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+
+          <div role="main">
+            <div class="section">
+              
+                <p>Before starting the Core, complete all of the following:</p>
+<table>
+<thead>
+<tr>
+<th>Checklist</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Access Volac's genomics server</td>
+</tr>
+<tr>
+<td>Secure connection set up</td>
+</tr>
+<tr>
+<td>Raw data saved in a sub-folder inside <code>input_core</code></td>
+</tr>
+<tr>
+<td>Sample sheet made and saved inside <code>input_core</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="starting-the-core">Starting the Core</h2>
+<p>First enter this command:</p>
+<pre><code>cd ~/genome_tools/Core
+</code></pre>
+<p>Then enter one of the following commands, depending on the file extension of your raw read data.</p>
+<p>If the file extension of your raw read data is <code>.fastq.gz</code>, enter this command, replacing <code>YYYY-MM-DD</code> with a date: </p>
+<pre><code>nextflow run core.nf --indexpath 'index_YYYY-MM-DD.csv' --inputfq 'YYYY-MM-DD/*_R{1,2}_001.fastq.gz'
+</code></pre>
+<p>If the file extension of your raw read data is <code>.fq.gz</code>, enter this command, replacing <code>YYYY-MM-DD</code> with a date: </p>
+<pre><code>nextflow run core.nf --indexpath 'index_YYYY-MM-DD.csv' --inputfq 'YYYY-MM-DD/*_R{1,2}_001.fq.gz'
+</code></pre>
+<div class="admonition tip">
+<p class="admonition-title">The sample sheet</p>
+<p>Use <code>--indexpath 'index_YYYY-MM-DD.csv'</code> to tell the Core which sample sheet to use.</p>
+<p>For example,</p>
+<p><code>--indexpath 'index_2022-04-29.csv'</code></p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">The raw data</p>
+<p>Use <code>--inputfq 'YYYY-MM-DD/*_R{1,2}_001.fastq.gz'</code> to tell the Core which raw data to use.</p>
+<p>For example,</p>
+<p><code>--inputfq '2022-04-29/*_R{1,2}_001.fastq.gz'</code></p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>The full entry will be:</p>
+<p><code>nextflow run core.nf --indexpath 'index_2022-04-29.csv' --inputfq '2022-04-29/*_R{1,2}_001.fastq.gz'</code></p>
+</div>
+<hr />
+<h2 id="exception-for-miseq-raw-data">Exception (for MiSeq raw data)</h2>
+<p>If your samples were sequenced using MiSeq technology (rather than NextSeq) an additional 5 characters are required to start the Core, <code>_L001</code>.</p>
+<p>Use <code>--inputfq 'YYYY-MM-DD/*_L001_R{1,2}_001.fastq.gz'</code> to tell the Core which raw data to use.</p>
+<p>Everything else remains the same.</p>
+<div class="admonition example">
+<p class="admonition-title">MiSeq example</p>
+<p>The full entry will be:</p>
+<p><code>nextflow run core.nf --indexpath 'index_2022-04-29.csv' --inputfq '2022-04-29/*_L001_R{1,2}_001.fastq.gz'</code></p>
+</div>
+<hr />
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="unloading.html" class="btn btn-neutral float-right" title="Downloading outputs">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="sampleSheet.html" class="btn btn-neutral" title="Preparing the sample sheet"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/volac-genomics/Core_docs/" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="sampleSheet.html" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="unloading.html" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '.';</script>
+    <script src="js/theme_extra.js" defer></script>
+    <script src="js/theme.js" defer></script>
+      <script src="search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
